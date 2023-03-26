@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
  * @return {string} The generated string
+ * generateRandomString() utility function is used to generate a random string for the 
+ * state query param and cookie. The state query param is kind of a security measure — 
+ * it protects against attacks such as cross-site request forgery.
  */
 const generateRandomString = length => {
   let text = '';
