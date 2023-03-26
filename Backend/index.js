@@ -52,6 +52,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/callback', (req, res) => {
+  /* The code variable is set to the authorization code returned from the Spotify API if it exists, otherwise it is set to null. */
   const code = req.query.code || null;
 
   axios({
